@@ -2,8 +2,12 @@
   "name": "taskflow",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "dist/server.js",
   "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,16 +17,15 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/arthurjd03/taskflow/issues"
   },
   "homepage": "https://github.com/arthurjd03/taskflow#readme",
+  "dependencies": {
+    "@prisma/client": "^7.10.1"
+  },
   "devDependencies": {
-    "@prisma/client": "^7.10.1",
     "@types/node": "^26.6.6",
-    "i": "^0.3.7",
-    "npm": "^12.2.3",
     "prisma": "^8.0.0-rc.35",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
